@@ -1256,8 +1256,6 @@ int WINAPI WinMain(HINSTANCE hThisInst, HINSTANCE hPrevInst,
     showTimer.Start(SHOWTIMER_INTERVAL);
     previewTimer.OnTimedEvent = previewLabel;
 
-    kbdhook = SetWindowsHookEx(WH_KEYBOARD_LL, LLKeyboardProc, hThisInst, NULL);
-    moshook = SetWindowsHookEx(WH_MOUSE_LL, LLMouseProc, hThisInst, 0);
     SetErrorMode(SEM_FAILCRITICALERRORS | SEM_NOGPFAULTERRORBOX);
     _set_abort_behavior(0,_WRITE_ABORT_MSG);
     SetUnhandledExceptionFilter(MyUnhandledExceptionFilter);
